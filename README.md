@@ -6,8 +6,8 @@ This code implements three clustering algorithms with Apache Spark in Java versi
  - [Compile](#Compile)
  - [Usage](#Usage)
    - [*k*-means](#k-means)
-   - [Genetic *k*-means algorithm](#Genetic k-means algorithm)
-   - [Particle swarm optimization](#Particle swarm optimization)
+   - [Genetic *k*-means algorithm](#Genetic-k-means-algorithm)
+   - [Particle swarm optimization](#Particle-swarm-optimization)
    
 ### Introduction
 [Apache Spark](https://spark.apache.org/) is a distributed general-purpose cluster-computing framework. It also uses MapReduce architecture to realize the distribution program. We expect to save execution time in the larger dataset when we implement the clustering algorithm with Apache Spark. The simulated results [[1]](https://doi.org/10.1016/j.jpdc.2017.10.020) show that GKA with Apache Spark reduce the execution time in the larger dataset.
