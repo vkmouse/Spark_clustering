@@ -47,7 +47,7 @@ No other parameter is required to execute the *k*-means. For example, dataset pa
     spark-submit --class edu.nchu.app.kmeans target/Spark_clustering-1.0-SNAPSHOT.jar dataset/iris.txt 50 3 kmeans.txt 2
 
 #### Genetic *k*-means algorithm
-Three parameters are required to execute the GA. And set the output path to gka.txt.
+Three parameters are required to execute the GKA. And set the output path to gka.txt.
 1. Number of chromsomes
 2. Crossover rate
 3. Mutation rate
@@ -58,14 +58,14 @@ For example, number of chromsomes is 20, crossover rate is 0.6, and mutation rat
 
 
 #### Particle swarm optimization
-Four parameters are required to execute the SE.
+Five parameters are required to execute the PSO. And set the output path to pso.txt.
 1. Number of particles
-2. c1
-3. c2
+2. c<sub>1<sub>
+3. c<sub>2<sub>
 4. Maximum of weight
 5. Minimum of weight
 
-For example, number of particles is 20, c1 is 2, c2 is 2, maximum of weight is 0.9, and  minimum of weight is 0.4
+For example, number of particles is 20, c<sub>1<sub> is 2, c<sub>2<sub> is 2, maximum of weight is 0.9, and  minimum of weight is 0.4
  
     spark-submit --class edu.nchu.app.pso target/Spark_clustering-1.0-SNAPSHOT.jar dataset/iris.txt 50 3 pso.txt 2 20 2 2 0.9 0.4
 
