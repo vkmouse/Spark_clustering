@@ -1,3 +1,5 @@
+[TOC]
+
 ## Clustering algorithms with Apache Spark
 This code implements three clustering algorithms with Apache Spark in Java version, *k*-means, genetic *k*-means algorithm (GKA), and particle swarm optimization (PSO) respectively to solve five datasets of clustering.
 
@@ -11,7 +13,7 @@ Install Apache Spark 1.5.2 or newer version, Java 1.8.0_144 or newer and Apache 
     sudo apt install docker.io
     docker --version
     
-Second, create a file "dockerfile" in the root path. Paste the following illustration to the "dockerfile".
+Second, create a file named **dockerfile** in the root path. Paste the following illustration to the **dockerfile**.
 
     FROM bde2020/spark-master:2.4.3-hadoop2.7
     RUN apk add --no-cache openjdk8 maven git
@@ -28,7 +30,7 @@ Fourth, run the image and execute the bash.
     docker run -it --rm=true --name spark-clustering -e ENABLE_INIT_DAEMON=false -d spark-clustering:latest
     docker exec -it spark-clustering bash
     
-Finally, go to the path of "Spark_clustering" and compile it with maven.
+Finally, go to the path of **Spark_clustering** and compile it with maven.
 
     cd Spark_clustering
     mvn package
@@ -60,12 +62,12 @@ For example, number of chromsomes is 20, crossover rate is 0.6, and mutation rat
 #### Particle swarm optimization
 Five parameters are required to execute the PSO. And set the output path to pso.txt.
 1. Number of particles
-2. c<sub>1<sub>
-3. c<sub>2<sub>
+2. c<sub>1</sub>
+3. c<sub>2</sub>
 4. Maximum of weight
 5. Minimum of weight
 
-For example, number of particles is 20, c<sub>1<sub> is 2, c<sub>2<sub> is 2, maximum of weight is 0.9, and  minimum of weight is 0.4
+For example, number of particles is 20, c<sub>1</sub> is 2,  c<sub>2</sub> is 2, maximum of weight is 0.9, and  minimum of weight is 0.4
  
-    spark-submit --class edu.nchu.app.pso target/Spark_clustering-1.0-SNAPSHOT.jar dataset/iris.txt 50 3 pso.txt 2 20 2 2 0.9 0.4
+	spark-submit --class edu.nchu.app.pso target/Spark_clustering-1.0-SNAPSHOT.jar dataset/iris.txt 50 3 pso.txt 2 20 2 2 0.9 0.4
 
