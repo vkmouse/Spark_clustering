@@ -5,8 +5,8 @@ This code implements three clustering algorithms with Apache Spark in Java versi
  - [Introduction](#Introduction)
  - [Compile](#Compile)
  - [Usage](#Usage)
-   - [*k*-means](#*k*-means)
-   - [Genetic *k*-means algorithm](#Genetic *k*-means algorithm)
+   - [*k*-means](#k-means)
+   - [Genetic *k*-means algorithm](#Genetic k-means algorithm)
    - [Particle swarm optimization](#Particle swarm optimization)
    
 ### Introduction
@@ -71,7 +71,7 @@ Three parameters are required to execute the GKA. And set the output path to gka
 
 For example, number of chromsomes is 20, crossover rate is 0.6, and mutation rate is 0.9.
  
-```bash
+ ```bash
 spark-submit --class edu.nchu.app.gka target/Spark_clustering-1.0-SNAPSHOT.jar dataset/iris.txt 50 3 gka.txt 2 20 0.6 0.9
 ```
 
